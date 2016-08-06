@@ -1,0 +1,12 @@
+language: cpp
+
+compiler:
+ - gcc
+
+script: 
+ - cd src/
+ - make NOGUI=1 WXSTATIC=1
+
+branches:
+  only:
+    - travis_build
