@@ -18,7 +18,7 @@ compiler:
 
 script: 
  - cd src/
- - make NOGUI=1 WXSTATIC=1
+ - make NOGUI=1 WXSTATIC=1 NOASM
 
 branches:
   only:
