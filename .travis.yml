@@ -32,7 +32,7 @@ script:
  - cd /home/travis/wxWidgets-3.0.2
  - cp /tmp/wxWidgets-3.0.2.zip .
  - unzip wxWidgets-3.0.2.zip
- - cd src/
+ - cd /home/travis/build/ka7/VeraCrypt/src/
  - make NOGUI=1 WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
  - make NOGUI=1 WXSTATIC=1 
 
