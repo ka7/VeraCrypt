@@ -31,7 +31,7 @@ script:
  - #cd /home/travis/wxWidgets-3.0.2
  - #cp /tmp/wxWidgets-3.0.2.zip .
  - #unzip wxWidgets-3.0.2.zip
- - #cd /home/travis/build/ka7/VeraCrypt/src/
+ - cd /home/travis/build/ka7/VeraCrypt/src/
  - #make WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
  - make 
  - sudo sh /home/travis/build/ka7/VeraCrypt/src/Setup/Linux/veracrypt*
