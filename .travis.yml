@@ -28,11 +28,12 @@ compiler:
 script: 
  - cd /tmp
  - wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.2/wxWidgets-3.0.2.zip
- - mkdir -p /usr/src/wxWidgets-3.0.2
- - cd /usr/src/wxWidgets-3.0.2
- - unzip /tmp/wxWidgets-3.0.2.zip
+ - mkdir -p /home/travis/wxWidgets-3.0.2
+ - cd /home/travis/wxWidgets-3.0.2
+ - cp /tmp/wxWidgets-3.0.2.zip .
+ - unzip wxWidgets-3.0.2.zip
  - cd src/
- - make NOGUI=1 WXSTATIC=1 WX_ROOT=/usr/src/wxWidgets-3.0.2 wxbuild
+ - make NOGUI=1 WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
  - make NOGUI=1 WXSTATIC=1 
 
 branches:
