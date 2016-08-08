@@ -17,10 +17,6 @@ addons:
      - pkg-config
      - fuse
      - libfuse-dev
-     - libwxgtk3.0-dev
-     - wx-common
-     - wx3.0-headers
-
 
 compiler:
  - gcc
@@ -31,10 +27,10 @@ script:
  - mkdir -p /home/travis/wxWidgets-3.0.2
  - cd /home/travis/wxWidgets-3.0.2
  - cp /tmp/wxWidgets-3.0.2.zip .
- - unzip wxWidgets-3.0.2.zip
+ - unzip -q wxWidgets-3.0.2.zip
  - cd /home/travis/build/ka7/VeraCrypt/src/
- - make NOGUI=1 WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
- - make NOGUI=1 WXSTATIC=1 
+ - make WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
+ - make WXSTATIC=1 
 
 branches:
   only:
