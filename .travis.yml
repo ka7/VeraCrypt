@@ -25,15 +25,16 @@ compiler:
  - gcc
 
 script: 
- - cd /tmp
- - wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.2/wxWidgets-3.0.2.zip
- - mkdir -p /home/travis/wxWidgets-3.0.2
- - cd /home/travis/wxWidgets-3.0.2
- - cp /tmp/wxWidgets-3.0.2.zip .
- - unzip -q wxWidgets-3.0.2.zip
- - cd /home/travis/build/ka7/VeraCrypt/src/
- - make WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
+ - #cd /tmp
+ - #wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.2/wxWidgets-3.0.2.zip
+ - #mkdir -p /home/travis/wxWidgets-3.0.2
+ - #cd /home/travis/wxWidgets-3.0.2
+ - #cp /tmp/wxWidgets-3.0.2.zip .
+ - #unzip wxWidgets-3.0.2.zip
+ - #cd /home/travis/build/ka7/VeraCrypt/src/
+ - #make WXSTATIC=1 WX_ROOT=/home/travis/wxWidgets-3.0.2 wxbuild
  - make 
+ - sudo sh /home/travis/build/ka7/VeraCrypt/src/Setup/Linux/veracrypt*
 
 branches:
   only:
