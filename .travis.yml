@@ -11,6 +11,7 @@ addons:
     - ubuntu-toolchain-r-test
     - llvm-toolchain-precise-3.6
     packages:
+     - unzip
      - nasm 
      - makeself
      - pkg-config
@@ -25,7 +26,13 @@ compiler:
  - gcc
 
 script: 
+ - cd /tmp
+ - wget https://github.com/wxWidgets/wxWidgets/releases/download/v3.0.2/wxWidgets-3.0.2.zip
+ - mkdir -p /usr/src/wxWidgets-3.0.2
+ - cd /usr/src/wxWidgets-3.0.2
+ - unzip /tmp/wxWidgets-3.0.2.zip
  - cd src/
+ - make NOGUI=1 WXSTATIC=1 WX_ROOT=/usr/src/wxWidgets-3.0.2 wxbuild
  - make NOGUI=1 WXSTATIC=1 
 
 branches:
