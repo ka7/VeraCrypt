@@ -12,6 +12,10 @@ addons:
     - llvm-toolchain-precise-3.6
     packages:
      - nasm 
+     - makeself
+     - pkg-config
+     - fuse
+     - fuse-dev
 
 compiler:
  - gcc
