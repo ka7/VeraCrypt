@@ -17,6 +17,9 @@ addons:
      - fuse
      - libfuse-dev
      - libwxgtk3.0-dev
+     - wx-common
+     - wx3.0-headers
+
 
 compiler:
  - gcc
